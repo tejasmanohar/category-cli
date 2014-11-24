@@ -4,6 +4,10 @@
 var program = require('commander');
 var requireDir = require('require-dir');
 var dir = requireDir('./lib');
+var dotenv = require('dotenv');
+
+// load env variables
+dotenv.load();
 
 // cli configuration
 program
