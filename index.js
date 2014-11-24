@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-
+// module dependencies
 var program = require('commander');
+var requireDir = require('require-dir');
+var dir = requireDir('./lib');
 
+// cli configuration
 program
   .version('0.0.1')
   .command('convert <input> <output>')

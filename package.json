@@ -24,7 +24,9 @@
   "dependencies": {
     "commander": "^2.5.0",
     "csv": "^0.4.1",
-    "googleplaces": "0.0.1",
+    "dotenv": "^0.4.0",
+    "google-places": "0.0.2",
+    "require-dir": "^0.1.0",
     "yelp": "^0.1.1"
   }
 }
