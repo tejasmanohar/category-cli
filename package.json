@@ -23,8 +23,9 @@
   "private": true,
   "dependencies": {
     "commander": "^2.5.0",
-    "csv": "^0.4.1",
     "dotenv": "^0.4.0",
+    "es6-promise": "^2.0.0",
+    "fast-csv": "^0.5.4",
     "google-places": "0.0.2",
     "require-dir": "^0.1.0",
     "yelp": "^0.1.1"
