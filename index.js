@@ -23,9 +23,9 @@ program
         var loc = data[1].toLowerCase() + ', ' + data[2].toLowerCase();
         var ws = fs.createWriteStream(output);
 
-        yelp.fullLookup(term, loc, function(content, term) {
-          console.log(data[0] + ' ' + term);
-          res.push(data[0] + ',' + term);
+        yelp.fullLookup(term, loc, function(cat, term) {
+          console.log(data[0] + ' ' + cat);
+          res.push(data[0] + ',' + cat);
           done();
         });
 
