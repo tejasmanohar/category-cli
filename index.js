@@ -11,13 +11,13 @@ program
   .action(function(input, output) {
     console.log('Start!');
     fs.readFile(input, function(err, data) {
-
       var res = [];
 
       var lines = data.toString().split('\n');
 
       async.eachLimit(lines, 20, function(line, done) {
         var data = line.split(',');
+        console.log(data);
         var loc = data[1] + ', ' + data[2];
         var ws = fs.createWriteStream(output);
 
