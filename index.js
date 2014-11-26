@@ -18,7 +18,6 @@ program
 
       async.eachLimit(lines, 10, function(line, done) {
         var data = line.split(',');
-        console.log(data);
         var term = data[0].split(/(?=\.[^.]+$)/)[0];
         var loc = data[1] + ', ' + data[2];
         var ws = fs.createWriteStream(output);
