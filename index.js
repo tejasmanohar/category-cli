@@ -9,6 +9,7 @@ program
   .version('1.0.0')
   .command('convert <input> <output>')
   .action(function(input, output) {
+    console.log('Start!');
     fs.readFile(input, function(err, data) {
 
       var res = [];
@@ -32,7 +33,7 @@ program
         }
 
         fs.writeFile(output, res.join('\n'), function() {
-          console.log('Done!');
+          console.log('End!');
         });
       });
 
