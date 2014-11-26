@@ -23,12 +23,14 @@
   "private": true,
   "dependencies": {
     "async": "^0.9.0",
+    "cheerio": "^0.18.0",
     "commander": "^2.5.0",
     "dotenv": "^0.4.0",
     "es6-promise": "^2.0.0",
     "fast-csv": "^0.5.4",
     "google-places": "0.0.2",
     "require-dir": "^0.1.0",
+    "superagent": "^0.21.0",
     "yelp": "^0.1.1"
   }
 }
