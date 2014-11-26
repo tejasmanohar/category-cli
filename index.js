@@ -15,7 +15,7 @@ program
 
       var lines = data.toString().split('\n');
 
-      async.eachLimit(lines, 10, function(line, done) {
+      async.eachLimit(lines, 20, function(line, done) {
         var data = line.split(',');
         var loc = data[1] + ', ' + data[2];
         var ws = fs.createWriteStream(output);
