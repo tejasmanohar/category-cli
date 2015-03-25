@@ -4,7 +4,6 @@ var csv = require('fast-csv');
 var yelp = require('./lib/yelp');
 var fs = require('fs');
 
-// cli configuration
 program
   .version('1.0.0')
   .command('convert <input> <output>')
