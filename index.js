@@ -19,7 +19,7 @@ program
         var loc = data[1] + ', ' + data[2];
         var ws = fs.createWriteStream(output);
 
-        yelp.fullLookup(data[0], loc, function(category, term) {
+        yelp.fullLookup(data[0], loc, function(error, category) {
           console.log(data[0] + ' ' + category);
           res.push(data[0] + ',' + category);
           done();
