@@ -16,11 +16,10 @@ program
 
       async.eachLimit(lines, 20, function(line, done) {
         var data = line.split(',');
-        console.log(data);
         var loc = data[1] + ', ' + data[2];
         var ws = fs.createWriteStream(output);
 
-        yelp.fullLookup(data[0], loc, function(cat, term) {
+        yelp.fullLookup(data[0], loc, function(error, cat, term) {
           console.log(data[0] + ' ' + cat);
           res.push(data[0] + ',' + cat);
           done();
