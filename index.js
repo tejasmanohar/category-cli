@@ -1,6 +1,5 @@
 var async = require('async');
 var program = require('commander');
-var csv = require('fast-csv');
 var yelp = require('./lib/yelp');
 var fs = require('fs');
 
@@ -16,12 +15,14 @@ program
 
       async.eachLimit(lines, 20, function(line, done) {
         var data = line.split(',');
-        var loc = data[1] + ', ' + data[2];
+        var num = data[0];
+        var cc = data[1];
+
         var ws = fs.createWriteStream(output);
 
-        yelp.fullLookup(data[0], loc, function(error, category) {
-          console.log(data[0] + ' ' + category);
-          res.push(data[0] + ',' + category);
+        yelp.fullLookup(data[0], cc, function(error, category) {
+          console.log(num + ' ' + category);
+          res.push(num + ',' + category);
           done();
         });
 
