@@ -14,6 +14,7 @@ program
       var lines = data.toString().split('\n');
 
       async.eachLimit(lines, 20, function(line, done) {
+        var start = (new Date()).getTime();
         var data = line.split(',');
         var num = data[0];
         var cc = data[1];
@@ -25,6 +26,10 @@ program
           res.push(num + ',' + category);
           done();
         });
+
+        var end = (new Date()).getTime();
+
+        console.log( "Duration:", (end - start) );
 
       }, function(err) {
         if (err) { 
